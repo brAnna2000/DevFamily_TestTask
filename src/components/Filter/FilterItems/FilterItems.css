@@ -1,0 +1,36 @@
+.brands div{
+    margin-bottom: 10px;
+}
+.brands input{
+    display: none;
+}
+.brands label{
+    font-size: 14px;
+    vertical-align: top;
+}
+.brands input+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+.brands input+label::before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    margin-right: 9px;
+}
+.brands input:checked+label::before {
+    border-color: var(--slate-gray);
+    background-color: var(--slate-gray);
+    background-image: url('../../../img/check.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+@media (max-width: 768px){
+    .brands{
+        margin-bottom: 34px;
+    }
+}

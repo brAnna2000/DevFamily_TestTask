@@ -1,0 +1,140 @@
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.mobile{
+    display: none;
+}
+hr{
+    display: none;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--matte);
+    border-radius: 4px;
+    position: relative;
+    margin: 0 1% 1% 0;
+}
+li > .new{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79px;
+    height: 26px;
+    background: #44C477;
+    border-radius: 26px;
+    top: 12px;
+    left: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+li > .new-hide{
+    visibility: hidden;
+}
+.product-info{
+    padding: 12px 24px 16px 16px;
+    display: grid;
+    align-items: flex-end;
+    flex-grow: 2;
+}
+.product-info .new, .product-info .new-hide{
+    display: none;
+}
+.product-info img{
+    display: none;
+}
+.title{
+    font-size: 14px;
+    align-self: flex-start;
+}
+.price-block{
+    margin: 12px 0 18px 0;
+}
+.price-block p{
+    font-size: 16px;
+    font-weight: 700;
+}
+li button{
+    width: 106px;
+    height: 40px;
+    border: 1px solid var(--gainsborough);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: transparent;
+}
+@media (min-width: 768px){
+    ul{
+        width: 79.8%;
+    }
+    li{
+        width: 23.2%;
+    }
+    li > img{
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    ul{
+        width: 95%;
+        justify-content: center;
+    }
+    .desctop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    li:first-of-type hr{
+        display: none;
+    }
+    hr{
+        display: block;
+        width: 100vw;
+        border: none;
+        height: 1px;
+        background-color: var(--matte);
+        position: absolute;
+        left: -20px;
+        top: -20px;
+    }
+    li{
+        width: 100%;
+        flex-direction: row;
+        border: none;
+        margin: 20px 0;
+    }
+    li > .new, li > .new-hide, .product-info .new-hide{
+        display: none;
+    }
+    .product-info .new{
+        display: block;
+    }
+    .product-info img{
+        display: block;
+    }
+    li > img{
+        width: 40%;
+        border-radius: 4px;
+    }
+    .product-info{
+        padding: 0 0 0 16px;
+    }
+    .price-block, .basket-block{
+        display: flex;
+        justify-content: space-between;
+    }
+    .price-block{
+        margin: 9px 0 16px 0;
+    }
+    .price-block .new{
+        font-weight: 500;
+        font-size: 11px;
+    }
+    
+}
